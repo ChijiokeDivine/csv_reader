@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report</title>
+</head>
+<body>
+    <h1 class="gr-text-8 text-center">Summary Report</h1>
+    <table border="1" class="table table-success table-striped-columns table-hover">
+        <thead>
+            <tr>
+                <th>State</th>
+                <th>DPD</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody >
+            {% for row in summary %}
+            <tr>
+                <td>{{ row.CustState }}</td>
+                <td>{{ row.DPD }}</td>
+                <td>{{ row.Count }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
